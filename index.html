@@ -9,10 +9,49 @@
 
 <body>
   <header class="topbar">
-    <h1>Lorenzo Zuin</h1>
+    <div class="logo-container">
+      <img class="profile-pic" src="profile-pic.jpeg" alt="Lorenzo Zuin">
+      <div>
+        <h1>Lorenzo Zuin</h1>
+        <span class="subtitle" data-i18n="subtitle">Software Engineer</span>
+      </div>
+    </div>
     <div class="controls">
-      <button id="langToggle">EN</button>
-      <button id="themeToggle">🌙</button>
+      <div class="control-group">
+        <span class="control-label" data-i18n="language_label">Lenguaje</span>
+        <div class="switch-container">
+          <span class="switch-icon">ES</span>
+          <label class="switch">
+            <input type="checkbox" id="langToggle">
+            <span class="slider"></span>
+          </label>
+          <span class="switch-icon">EN</span>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <span class="control-label" data-i18n="theme_label">Modo</span>
+        <div class="switch-container">
+          <svg class="switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+          </label>
+          <svg class="switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -20,23 +59,67 @@
     <section id="about">
       <h2 data-i18n="about_title">Sobre mí</h2>
       <p data-i18n="about_text">
-        Ingeniero en Sistemas. Me interesa IA, backend y proyectos bien hechos.
+        Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código.
+        Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. 
+        Soy bueno encontrando soluciones eficientes a problemas.
       </p>
+      <p data-i18n="page_description">En esta página vas a encontrar algunos de mis proyectos y podrás verlos en detalle</p>
     </section>
 
     <section id="projects">
-      <h2 data-i18n="projects_title">Proyectos</h2>
+      <h2 data-i18n="projects_title">Proyectos Destacados</h2>
 
       <div id="repos" class="repo-grid">
-        <!-- TEMPLATE DE REPO -->
+        <!-- Proyecto 1 -->
         <article class="repo-card">
-          <h3>Nombre del Proyecto</h3>
-          <p>Descripción corta del proyecto.</p>
-          <div class="repo-meta">
-            <span>🛠 Python</span>
-            <span>⭐ 12</span>
+          <div class="card-header">
+            <h3>NeuroFlow API</h3>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
           </div>
-          <a href="#" target="_blank">Ver repositorio →</a>
+          <p data-i18n="proj_1_desc">Sistema de procesamiento de lenguaje natural para análisis de sentimientos en tiempo real de grandes volúmenes de datos.</p>
+          <div class="repo-meta">
+            <a href="#" target="_blank">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="repo-card">
+          <div class="card-header">
+            <h3>E-Commerce Microservices</h3>
+            <span class="tag">Go</span>
+            <span class="tag">Docker</span>
+          </div>
+          <p data-i18n="proj_2_desc">Arquitectura de microservicios para plataforma de comercio electrónico de alta concurrencia, soportando miles de transacciones por segundo.</p>
+          <div class="repo-meta">
+            <a href="#" target="_blank">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="repo-card">
+          <div class="card-header">
+            <h3>Smart Home Dashboard</h3>
+            <span class="tag">React</span>
+            <span class="tag">IoT</span>
+          </div>
+          <p data-i18n="proj_3_desc">Panel de control interactivo para dispositivos IoT domésticos con visualización de datos de consumo energético.</p>
+          <div class="repo-meta">
+            <a href="#" target="_blank">GitHub →</a>
+          </div>
+        </article>
+        
+        <!-- Proyecto 4 -->
+        <article class="repo-card">
+          <div class="card-header">
+            <h3>FinTech Core</h3>
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+          </div>
+          <p data-i18n="proj_4_desc">Núcleo transaccional bancario con estricto cumplimiento de seguridad y auditoría en tiempo real.</p>
+          <div class="repo-meta">
+            <a href="#" target="_blank">GitHub →</a>
+          </div>
         </article>
       </div>
     </section>
