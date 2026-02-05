@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorenzo Zuin | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1>Lorenzo Zuin</h1>
+    <div class="controls">
+      <button id="langToggle">EN</button>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2 data-i18n="about_title">Sobre mí</h2>
+      <p data-i18n="about_text">
+        Ingeniero en Sistemas. Me interesa IA, backend y proyectos bien hechos.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 data-i18n="projects_title">Proyectos</h2>
+
+      <div id="repos" class="repo-grid">
+        <!-- TEMPLATE DE REPO -->
+        <article class="repo-card">
+          <h3>Nombre del Proyecto</h3>
+          <p>Descripción corta del proyecto.</p>
+          <div class="repo-meta">
+            <span>🛠 Python</span>
+            <span>⭐ 12</span>
+          </div>
+          <a href="#" target="_blank">Ver repositorio →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lorenzo Zuin</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

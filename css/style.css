@@ -1,0 +1,78 @@
+:root {
+  --bg: #f9fafb;
+  --text: #111;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0d10;
+  --text: #e5e7eb;
+  --card: #111827;
+  --border: #1f2933;
+}
+
+/* Fondo de cuadricula de puntos */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.controls button {
+  margin-left: .5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  background: var(--card);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.repo-card h3 {
+  margin-top: 0;
+}
+
+.repo-meta {
+  font-size: .9rem;
+  opacity: .8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.repo-card a {
+  display: inline-block;
+  margin-top: .5rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  opacity: .6;
+}
