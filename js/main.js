@@ -14,26 +14,30 @@ const translations = {
     theme_label: "Modo",
     subtitle: "Ingeniero de Software",
     about_title: "Sobre mí",
-    about_text: "Ingeniero en Sistemas con sólida experiencia en desarrollo backend y arquitecturas de microservicios. Me especializo en construir sistemas robustos y escalables, integrando tecnologías de Inteligencia Artificial para optimizar procesos. Siempre busco la excelencia técnica y el código limpio.",
+    about_text: "Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código. Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. Soy bueno encontrando soluciones eficientes a problemas.",
     page_description: "En esta página vas a encontrar algunos de mis proyectos y podrás verlos en detalle",
     projects_title: "Proyectos Destacados",
-    proj_1_desc: "Sistema de procesamiento de lenguaje natural para análisis de sentimientos en tiempo real de grandes volúmenes de datos.",
-    proj_2_desc: "Arquitectura de microservicios para plataforma de comercio electrónico de alta concurrencia, soportando miles de transacciones por segundo.",
-    proj_3_desc: "Panel de control interactivo para dispositivos IoT domésticos con visualización de datos de consumo energético.",
-    proj_4_desc: "Núcleo transaccional bancario con estricto cumplimiento de seguridad y auditoría en tiempo real."
+    proj_1_desc: "Una aplicación que resuelve automáticamente sudokus partiendo de una interfaz gráfica, devolviendo la solución correcta siempre que sea posible.",
+    proj_2_desc: "Un proyecto para predecir con modelos de inteligencia artificial el valor de la evapotranspiración del suelo basado en la obtención de miles de datos de satélites de la NASA.",
+    proj_3_desc: "Una aplicación que permite gestionar notas personales categorizándolas, filtrandolas y pudiendo archivar, además de editar y borrar.",
+    proj_4_desc: "Código para generar un wrapped de los clientes de Zaple en 2025 con sus números y logros del año.",
+    proj_5_desc: "Un proyecto de ciencia de datos para predecir la calificación de libros en Amazon utilizando técnicas de machine learning.",
+    proj_6_desc: "Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz."
   },
   en: {
     language_label: "Language",
     theme_label: "Mode",
     subtitle: "Software Engineer",
     about_title: "About Me",
-    about_text: "Systems Engineer with solid experience in backend development and microservices architectures. I specialize in building robust and scalable systems, integrating Artificial Intelligence technologies to optimize processes. I always strive for technical excellence and clean code.",
-    page_description: "In this page you will find some of my projects and you can see them in detail",
+    about_text: "Systems Engineer with years of experience in fullstack development. I use AI tools to optimize development processes and improve code quality. I enjoy solving problems with professional solutions. I'm good at collaborating in teams and have leadership skills. I'm skilled at finding efficient solutions to challenges.",
+    page_description: "On this page you will find some of my projects and can view them in detail",
     projects_title: "Featured Projects",
-    proj_1_desc: "Natural language processing system for real-time sentiment analysis of large data volumes.",
-    proj_2_desc: "Microservices architecture for high-concurrency e-commerce platform, supporting thousands of transactions per second.",
-    proj_3_desc: "Interactive dashboard for home IoT devices with energy consumption data visualization.",
-    proj_4_desc: "Banking transaction core with strict security compliance and real-time auditing."
+    proj_1_desc: "An application that automatically solves sudoku puzzles from a graphical interface, returning the correct solution whenever possible.",
+    proj_2_desc: "A project to predict the evapotranspiration value of soil using AI models based on thousands of data points from NASA satellites.",
+    proj_3_desc: "An application that allows you to manage personal notes by categorizing them, filtering them, and archiving, as well as editing and deleting.",
+    proj_4_desc: "Code to generate a Zaple wrapped for clients in 2025 with their numbers and year achievements.",
+    proj_5_desc: "A data science project to predict book ratings on Amazon using machine learning techniques.",
+    proj_6_desc: "An application that works with a virtual AI agent to take calls and handle orders, connected with Vapi to manage voice communications."
   }
 };
 
