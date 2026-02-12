@@ -8,12 +8,12 @@
 </head>
 
 <body>
-  <header class="topbar">
+  <header class="topbar reveal active">
     <div class="logo-container">
       <img class="profile-pic" src="profile-pic.jpeg" alt="Lorenzo Zuin">
       <div>
         <h1>Lorenzo Zuin</h1>
-        <span class="subtitle" data-i18n="subtitle">Software Engineer</span>
+        <span class="subtitle" id="typing-text" data-i18n="subtitle">Ingeniero en Sistemas de Información</span>
       </div>
     </div>
     <div class="controls">
@@ -55,27 +55,35 @@
     </div>
   </header>
 
-  <main class="container">
-    <section id="about">
-      <h2 data-i18n="about_title">Sobre mí</h2>
-      <p data-i18n="about_text">
-        Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código.
-        Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. 
-        Soy bueno encontrando soluciones eficientes a problemas.
-      </p>
-      <p data-i18n="page_description">En esta página vas a encontrar algunos de mis proyectos y podrás verlos en detalle</p>
+  <main>
+    <section id="about-wrapper">
+      <div class="about-bg"></div>
+      <div class="container">
+        <section id="about">
+          <h2 data-i18n="about_title" class="reveal">Sobre mí</h2>
+          <p data-i18n="about_text" class="reveal stagger-1">
+            Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código.
+            Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. 
+            Soy bueno encontrando soluciones eficientes a problemas.
+          </p>
+          <p data-i18n="page_description" class="reveal stagger-2">En esta página vas a encontrar algunos de mis proyectos y podrás verlos en detalle</p>
+        </section>
+      </div>
     </section>
 
+    <div class="container">
     <section id="projects">
-      <h2 data-i18n="projects_title">Proyectos Destacados</h2>
+      <h2 data-i18n="projects_title" class="reveal">Proyectos Destacados</h2>
 
       <div id="repos" class="repo-grid">
         <!-- Proyecto 1 -->
-        <article class="repo-card">
+        <article class="repo-card reveal stagger-1">
           <div class="card-header">
             <h3>Sudoku Solver</h3>
-            <span class="tag">Python</span>
-            <span class="tag">GUI</span>
+            <div class="tag-container">
+                <span class="tag">Python</span>
+                <span class="tag">GUI</span>
+            </div>
           </div>
           <p data-i18n="proj_1_desc">Una aplicación que resuelve automáticamente sudokus partiendo de una interfaz gráfica, devolviendo la solución correcta siempre que sea posible.</p>
           <div class="repo-meta">
@@ -84,11 +92,13 @@
         </article>
 
         <!-- Proyecto 2 -->
-        <article class="repo-card">
+        <article class="repo-card reveal stagger-2">
           <div class="card-header">
             <h3>Evapotranspiración</h3>
-            <span class="tag">ML</span>
-            <span class="tag">NASA API</span>
+            <div class="tag-container">
+                <span class="tag">ML</span>
+                <span class="tag">NASA API</span>
+            </div>
           </div>
           <p data-i18n="proj_2_desc">Un proyecto para predecir con modelos de inteligencia artificial el valor de la evapotranspiración del suelo basado en la obtención de miles de datos de satélites de la NASA.</p>
           <div class="repo-meta">
@@ -97,11 +107,13 @@
         </article>
 
         <!-- Proyecto 3 -->
-        <article class="repo-card">
+        <article class="repo-card reveal stagger-3">
           <div class="card-header">
             <h3>Notes App</h3>
-            <span class="tag">React</span>
-            <span class="tag">MongoDB</span>
+            <div class="tag-container">
+                <span class="tag">React</span>
+                <span class="tag">MongoDB</span>
+            </div>
           </div>
           <p data-i18n="proj_3_desc">Una aplicación que permite gestionar notas personales categorizándolas, filtrandolas y pudiendo archivar, además de editar y borrar.</p>
           <div class="repo-meta">
@@ -110,11 +122,13 @@
         </article>
         
         <!-- Proyecto 4 -->
-        <article class="repo-card">
+        <article class="repo-card reveal stagger-4">
           <div class="card-header">
             <h3>Zaple Wrapped</h3>
-            <span class="tag">Python</span>
-            <span class="tag">Data</span>
+            <div class="tag-container">
+                <span class="tag">Python</span>
+                <span class="tag">Data</span>
+            </div>
           </div>
           <p data-i18n="proj_4_desc">Código para generar un wrapped de los clientes de Zaple en 2025 con sus números y logros del año.</p>
           <div class="repo-meta">
@@ -123,11 +137,13 @@
         </article>
 
         <!-- Proyecto 5 -->
-        <article class="repo-card">
+        <article class="repo-card reveal stagger-5">
           <div class="card-header">
             <h3>Books Reviews</h3>
-            <span class="tag">Data Science</span>
-            <span class="tag">ML</span>
+            <div class="tag-container">
+                <span class="tag">Data Science</span>
+                <span class="tag">ML</span>
+            </div>
           </div>
           <p data-i18n="proj_5_desc">Un proyecto de ciencia de datos para predecir la calificación de libros en Amazon utilizando técnicas de machine learning.</p>
           <div class="repo-meta">
@@ -136,23 +152,53 @@
         </article>
 
         <!-- Proyecto 6 -->
-        <article class="repo-card">
-          <div class="card-header">
-            <h3>Nexobit</h3>
-            <span class="tag">AI</span>
-            <span class="tag">Vapi</span>
-          </div>
-          <p data-i18n="proj_6_desc">Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz.</p>
-          <div class="repo-meta">
-            <a href="#" target="_blank">GitHub →</a>
-          </div>
-        </article>
+        <article class="repo-card reveal stagger-6">
+            <div class="card-header">
+              <h3>Nexobit</h3>
+              <div class="tag-container">
+                  <span class="tag">AI</span>
+                  <span class="tag">Vapi</span>
+              </div>
+            </div>
+            <p data-i18n="proj_6_desc">Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz.</p>
+            <div class="repo-meta">
+              <a href="#" target="_blank">GitHub →</a>
+            </div>
+          </article>
       </div>
     </section>
+
+    <section id="education" class="reveal">
+      <h2 class="reveal" data-i18n="education_title">Educación</h2>
+      <div class="education-block">
+        <div class="edu-card">
+           <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+           </div>
+           <div class="edu-content">
+              
+              <h2 class="edu-degree" data-i18n="edu_1_degree">Ingeniero en Sistemas de Información</h2>
+              <div class="edu-university" data-i18n="edu_1_place">UTN - Facultad Regional Córdoba</div>
+           </div>
+           <div class="edu-stats">
+              <div class="stat-item">
+                <span class="stat-value" data-i18n="edu_1_gpa">Promedio: 8.6</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label" data-i18n="edu_1_time">Graduado en Diciembre 2024</span>
+              </div>
+           </div>
+        </div>
+      </div>
+    </section>
+    </div>
   </main>
 
   <footer>
-    <p>Lorenzo Zuin</p>
+    
   </footer>
 
   <script src="js/main.js"></script>
