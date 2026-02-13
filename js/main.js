@@ -27,7 +27,8 @@ const translations = {
     proj_3_desc: "Una aplicación que permite gestionar notas personales categorizándolas, filtrandolas y pudiendo archivar, además de editar y borrar.",
     proj_4_desc: "Código para generar un wrapped de los clientes de Zaple en 2025 con sus números y logros del año.",
     proj_5_desc: "Un proyecto de ciencia de datos para predecir la calificación de libros en Amazon utilizando técnicas de machine learning.",
-    proj_6_desc: "Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz."
+    proj_6_desc: "Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz.",
+    proj_7_desc: "Es un juego que lo hice para que mi abuelo pueda entrenar su capacidad cognitiva, aparece un color y tenes que seleccionar el color de la palabra y no la palabra."
   },
   en: {
     language_label: "Language",
@@ -47,7 +48,8 @@ const translations = {
     proj_3_desc: "An application that allows you to manage personal notes by categorizing them, filtering them, and archiving, as well as editing and deleting.",
     proj_4_desc: "Code to generate a Zaple wrapped for clients in 2025 with their numbers and year achievements.",
     proj_5_desc: "A data science project to predict book ratings on Amazon using machine learning techniques.",
-    proj_6_desc: "An application that works with a virtual AI agent to take calls and handle orders, connected with Vapi to manage voice communications."
+    proj_6_desc: "An application that works with a virtual AI agent to take calls and handle orders, connected with Vapi to manage voice communications.",
+    proj_7_desc: "A game I made to help my grandfather train his cognitive skills. A color appears, and you have to select the color of the text, not the word itself."
   }
 };
 
