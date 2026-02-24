@@ -10,8 +10,9 @@ let currentLang = "es";
 
 const translations = {
   es: {
-    language_label: "Lenguaje",
+    language_label: "Idioma",
     theme_label: "Modo",
+    contact_btn: "Contacto",
     subtitle: "Ingeniero en Sistemas de Información",
     about_title: "Sobre mí",
     about_text: "Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código. Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. Soy bueno encontrando soluciones eficientes a problemas.",
@@ -28,11 +29,14 @@ const translations = {
     proj_4_desc: "Código para generar un wrapped de los clientes de Zaple en 2025 con sus números y logros del año.",
     proj_5_desc: "Un proyecto de ciencia de datos para predecir la calificación de libros en Amazon utilizando técnicas de machine learning.",
     proj_6_desc: "Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz.",
-    proj_7_desc: "Es un juego que lo hice para que mi abuelo pueda entrenar su capacidad cognitiva, aparece un color y tenes que seleccionar el color de la palabra y no la palabra."
+    proj_7_desc: "Es un juego que lo hice para que mi abuelo pueda entrenar su capacidad cognitiva, aparece un color y tenes que seleccionar el color de la palabra y no la palabra.",
+    contact_title: "Contacto",
+    contact_text: "Podes contactarme por mail o buscarme en mi Linkedin"
   },
   en: {
     language_label: "Language",
     theme_label: "Mode",
+    contact_btn: "Contact",
     subtitle: "Software Engineer",
     about_title: "About Me",
     about_text: "Systems Engineer with years of experience in fullstack development. I use AI tools to optimize development processes and improve code quality. I enjoy solving problems with professional solutions. I'm good at collaborating in teams and have leadership skills. I'm skilled at finding efficient solutions to challenges.",
@@ -49,7 +53,9 @@ const translations = {
     proj_4_desc: "Code to generate a Zaple wrapped for clients in 2025 with their numbers and year achievements.",
     proj_5_desc: "A data science project to predict book ratings on Amazon using machine learning techniques.",
     proj_6_desc: "An application that works with a virtual AI agent to take calls and handle orders, connected with Vapi to manage voice communications.",
-    proj_7_desc: "A game I made to help my grandfather train his cognitive skills. A color appears, and you have to select the color of the text, not the word itself."
+    proj_7_desc: "A game I made to help my grandfather train his cognitive skills. A color appears, and you have to select the color of the text, not the word itself.",
+    contact_title: "Contact",
+    contact_text: "Feel free to contact me by email or find me on my LinkedIn"
   }
 };
 
@@ -102,6 +108,19 @@ if(langSwitch) {
   langSwitch.addEventListener("change", (e) => {
     const newLang = e.target.checked ? "en" : "es";
     updateLanguage(newLang);
+  });
+}
+
+/* =====================
+   CONTACT BUTTON SCROLL
+===================== */
+const contactBtn = document.getElementById("contactBtn");
+if (contactBtn) {
+  contactBtn.addEventListener("click", () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 }
 

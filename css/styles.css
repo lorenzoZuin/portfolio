@@ -130,6 +130,45 @@ h1, h2, h3, .brand {
   letter-spacing: 0.1em;
 }
 
+/* Contact Header Button */
+.contact-header-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.contact-header-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.contact-header-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+[data-theme="dark"] .contact-header-btn {
+  background: var(--primary);
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
+}
+
+[data-theme="dark"] .contact-header-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+
 /* Toggle Switches */
 .switch-container {
   display: flex;
@@ -446,12 +485,43 @@ section {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 4rem 2rem;
+  padding: 1.5rem 5%;
   color: var(--text-secondary);
   font-size: 0.9rem;
   border-top: 1px solid var(--border);
-  margin-top: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-contact-content {
+  max-width: 520px;
+  width: 100%;
+  text-align: right;
+  opacity: 1;
+  transform: none;
+}
+
+.footer-contact-content h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.footer-contact-content p {
+  margin: 0.35rem 0 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+footer .contact-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* =====================
@@ -523,3 +593,43 @@ footer {
   background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
   opacity: 0.15;
 }
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.contact-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.contact-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  footer {
+    justify-content: center;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .footer-contact-content {
+    text-align: center;
+  }
+
+  footer .contact-links {
+    justify-content: center;
+  }
+}
+
