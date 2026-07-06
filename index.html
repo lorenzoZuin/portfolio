@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lorenzo Zuin | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/dot-field.css" />
+  <link rel="stylesheet" href="css/chroma-grid.css" />
 </head>
-
 <body>
+  <div id="about-dotfield" class="about-dotfield"></div>
   <header class="topbar reveal active">
     <div class="logo-container">
       <img class="profile-pic" src="profile-pic.jpeg" alt="Lorenzo Zuin">
-      <div>
+      <div class="brand-text">
         <h1>Lorenzo Zuin</h1>
         <span class="subtitle" id="typing-text" data-i18n="subtitle">Ingeniero en Sistemas de Información</span>
       </div>
     </div>
+    
     <div class="controls">
-      <div class="control-group">
+      <div class="control-group compact">
         <span class="control-label" data-i18n="language_label">Idioma</span>
         <div class="switch-container">
           <span class="switch-icon">ES</span>
@@ -28,8 +31,8 @@
           <span class="switch-icon">EN</span>
         </div>
       </div>
-
-      <div class="control-group">
+      
+      <div class="control-group compact">
         <span class="control-label" data-i18n="theme_label">Modo</span>
         <div class="switch-container">
           <svg class="switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -53,7 +56,7 @@
         </div>
       </div>
       
-      <button class="contact-header-btn" id="contactBtn">
+      <button class="contact-header-btn compact-btn" id="contactBtn">
         <span data-i18n="contact_btn">Contacto</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -61,10 +64,10 @@
       </button>
     </div>
   </header>
-
+  
   <main>
     <section id="about-wrapper">
-      <div class="about-bg"></div>
+      <div id="about-dotfield" class="about-dotfield"></div>
       <div class="container">
         <section id="about">
           <h2 data-i18n="about_title" class="reveal">Sobre mí</h2>
@@ -82,112 +85,7 @@
     <section id="projects">
       <h2 data-i18n="projects_title" class="reveal">Proyectos Destacados</h2>
 
-      <div id="repos" class="repo-grid">
-        <!-- Proyecto 1 -->
-        <article class="repo-card reveal stagger-1">
-          <div class="card-header">
-            <h3>Sudoku Solver</h3>
-            <div class="tag-container">
-                <span class="tag">Python</span>
-                <span class="tag">GUI</span>
-            </div>
-          </div>
-          <p data-i18n="proj_1_desc">Una aplicación que resuelve automáticamente sudokus partiendo de una interfaz gráfica, devolviendo la solución correcta siempre que sea posible.</p>
-          <div class="repo-meta">
-            <a href="https://github.com/lorenzoZuin/sudokuSolver" target="_blank">GitHub →</a>
-          </div>
-        </article>
-
-        <!-- Proyecto 2 -->
-        <article class="repo-card reveal stagger-2">
-          <div class="card-header">
-            <h3>Evapotranspiración</h3>
-            <div class="tag-container">
-                <span class="tag">ML</span>
-                <span class="tag">Python</span>
-            </div>
-          </div>
-          <p data-i18n="proj_2_desc">Un proyecto para predecir con modelos de inteligencia artificial el valor de la evapotranspiración del suelo basado en la obtención de miles de datos de satélites de la NASA.</p>
-          <div class="repo-meta">
-            <a href="https://github.com/lorenzoZuin/EvapoTranspiracion" target="_blank">GitHub →</a>
-            <a href="https://evapo-transpiracion-ai.vercel.app/" target="_blank">Web →</a>
-          </div>
-        </article>
-
-        <!-- Proyecto 3 -->
-        <article class="repo-card reveal stagger-3">
-          <div class="card-header">
-            <h3>Notes App</h3>
-            <div class="tag-container">
-                <span class="tag">React</span>
-            </div>
-          </div>
-          <p data-i18n="proj_3_desc">Una aplicación que permite gestionar notas personales categorizándolas, filtrandolas y pudiendo archivar, además de editar y borrar.</p>
-          <div class="repo-meta">
-            <a href="https://github.com/lorenzoZuin/Notes-app" target="_blank">GitHub →</a>
-          </div>
-        </article>
-        
-        <!-- Proyecto 4 -->
-        <article class="repo-card reveal stagger-4">
-          <div class="card-header">
-            <h3>Zaple Wrapped</h3>
-            <div class="tag-container">
-                <span class="tag">Python</span>
-                <span class="tag">Data</span>
-            </div>
-          </div>
-          <p data-i18n="proj_4_desc">Código para generar un wrapped de los clientes de Zaple en 2025 con sus números y logros del año.</p>
-          <div class="repo-meta">
-            <a href="https://github.com/lorenzoZuin/Zaple-wraped" target="_blank">GitHub →</a>
-          </div>
-        </article>
-
-        <!-- Proyecto 5 -->
-        <article class="repo-card reveal stagger-5">
-          <div class="card-header">
-            <h3>Books Reviews</h3>
-            <div class="tag-container">
-                <span class="tag">Data Science</span>
-                <span class="tag">ML</span>
-            </div>
-          </div>
-          <p data-i18n="proj_5_desc">Un proyecto de ciencia de datos para predecir la calificación de libros en Amazon utilizando técnicas de machine learning.</p>
-          <div class="repo-meta">
-            <a href="#" target="_blank">GitHub →</a>
-          </div>
-        </article>
-
-        <!-- Proyecto 6 -->
-        <article class="repo-card reveal stagger-6">
-            <div class="card-header">
-              <h3>Nexobit</h3>
-              <div class="tag-container">
-                  <span class="tag">AI</span>
-                  <span class="tag">Vapi</span>
-              </div>
-            </div>
-            <p data-i18n="proj_6_desc">Una aplicación que funciona con un agente virtual de IA para tomar llamadas y atender pedidos, conectado con Vapi para gestionar las comunicaciones de voz.</p>
-            <div class="repo-meta">
-              <a href="https://github.com/lorenzoZuin/nexobit" target="_blank">GitHub →</a>
-            </div>
-          </article>
-
-        <!-- Proyecto 7 -->
-        <article class="repo-card reveal stagger-7">
-            <div class="card-header">
-              <h3>MindGames</h3>
-              <div class="tag-container">
-                  <span class="tag">React</span>
-              </div>
-            </div>
-            <p data-i18n="proj_7_desc">Son un juegos que hice para que mi abuelo pueda entrenar su capacidad cognitiva, aparece un color y tenes que seleccionar el color de la palabra y no la palabra.</p>
-            <div class="repo-meta">
-              <a href="https://github.com/lorenzoZuin/MindGames" target="_blank">GitHub →</a>
-              <a href="https://mind-games-eight.vercel.app/" target="_blank">Web →</a>
-            </div>
-          </article>
-      </div>
+      <div id="repos" class="projects-grid-shell"></div>
     </section>
 
     <section id="education" class="reveal">
@@ -241,6 +139,45 @@
     </div>
   </footer>
 
+  <script type="module">
+    import React from 'https://esm.sh/react@18';
+    import { createRoot } from 'https://esm.sh/react-dom@18/client';
+    import DotField from './js/DotField.js';
+    import ChromaGrid from './js/ChromaGrid.js';
+
+    const mountNode = document.getElementById('about-dotfield');
+    if (mountNode) {
+      const root = createRoot(mountNode);
+      root.render(
+        React.createElement(DotField, {
+          dotRadius: 2,
+          dotSpacing: 24,
+          bulgeStrength: 45,
+          glowRadius: 260,
+          sparkle: false,
+          waveAmplitude: 0,
+          cursorRadius: 700,
+          cursorForce: 0.07,
+          gradientFrom: '#8f8f8f',
+          gradientTo: '#2f3a96',
+          glowColor: '#000000',
+        })
+      );
+    }
+
+    const projectsMountNode = document.getElementById('repos');
+    if (projectsMountNode) {
+      const projectsRoot = createRoot(projectsMountNode);
+      projectsRoot.render(
+        React.createElement(ChromaGrid, {
+          className: 'projects-grid',
+          columns: 3,
+          rows: 2,
+          radius: 300,
+        })
+      );
+    }
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ const translations = {
     contact_btn: "Contacto",
     subtitle: "Ingeniero en Sistemas de Información",
     about_title: "Sobre mí",
-    about_text: "Ingeniero en Sistemas con años de experiencia en desarrollo fullstack. Uso herramientas de IA para optimizar procesos de desarrollo y mejorar la calidad del código. Me gusta resolver problemas con soluciones profesionales. Soy bueno colaborando en equipo y tengo habilidades para liderazgo. Soy bueno encontrando soluciones eficientes a problemas.",
+    about_text: "Ingeniero en Sistemas con más de 3 años de experiencia desarrollando aplicaciones backend, sistemas de automatización y soluciones basadas en IA. Trabajé en software para organismos públicos, plataformas contables, scraping de grandes volúmenes de datos e integración con ARCA.",
     page_description: "En esta página vas a encontrar algunos de mis proyectos y podrás verlos en detalle",
     education_title: "Educación",
     edu_1_degree: "Ingeniero en Sistemas de Información",
@@ -39,7 +39,7 @@ const translations = {
     contact_btn: "Contact",
     subtitle: "Software Engineer",
     about_title: "About Me",
-    about_text: "Systems Engineer with years of experience in fullstack development. I use AI tools to optimize development processes and improve code quality. I enjoy solving problems with professional solutions. I'm good at collaborating in teams and have leadership skills. I'm skilled at finding efficient solutions to challenges.",
+    about_text: "Systems Engineer with over 3 years of experience developing backend applications, automation systems, and AI-based solutions. I have worked on software for public sector entities, accounting platforms, large-scale data scraping, and integration with ARCA.",
     page_description: "On this page you will find some of my projects and can view them in detail",
     education_title: "Education",
     edu_1_degree: "Information Systems Engineer",
@@ -68,13 +68,11 @@ function updateLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
     if (translations[lang][key]) {
-      // If element has animation classes, we might want to re-trigger? 
-      // For now just update text.
-      
-      // Special case for typing text if we implement it, but for now simple textContent is safe.
       el.textContent = translations[lang][key];
     }
   });
+
+  document.dispatchEvent(new CustomEvent('portfolio:languagechange', { detail: { lang } }));
 }
 
 function updateTheme(theme) {
