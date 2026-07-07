@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, memo } from 'https://esm.sh/react@18';
+import React, { useEffect, useRef, memo, useState } from 'https://esm.sh/react@18';
 
 const TWO_PI = Math.PI * 2;
 const DOT_FIELD_STYLE_ID = 'dot-field-style';
@@ -30,15 +30,30 @@ const DotField = memo(({
   const svgRef = useRef(null);
   const glowRef = useRef(null);
   const dotsRef = useRef([]);
+  const [theme, setTheme] = useState(document.documentElement.dataset.theme || 'dark');
   const mouseRef = useRef({ x: -9999, y: -9999, prevX: -9999, prevY: -9999, speed: 0 });
   const rafRef = useRef(null);
   const sizeRef = useRef({ w: 0, h: 0, offsetX: 0, offsetY: 0 });
   const glowOpacity = useRef(0);
   const engagement = useRef(0);
   const propsRef = useRef({});
-  propsRef.current = { dotRadius, dotSpacing, cursorRadius, cursorForce, bulgeOnly, bulgeStrength, sparkle, waveAmplitude, gradientFrom, gradientTo };
+  const isLightTheme = theme === 'light';
+  const resolvedGradientFrom = isLightTheme ? 'rgba(10, 9, 9, 0.95)' : gradientFrom;
+  const resolvedGradientTo = isLightTheme ? 'rgba(77, 77, 77, 0.8)' : gradientTo;
+  const resolvedGlowColor = isLightTheme ? 'rgba(255, 255, 255, 0.7)' : glowColor;
+  propsRef.current = { dotRadius, dotSpacing, cursorRadius, cursorForce, bulgeOnly, bulgeStrength, sparkle, waveAmplitude, gradientFrom: resolvedGradientFrom, gradientTo: resolvedGradientTo, glowColor: resolvedGlowColor };
   const rebuildRef = useRef(null);
   const glowIdRef = useRef(`dot-field-glow-${Math.random().toString(36).slice(2, 9)}`);
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setTheme(document.documentElement.dataset.theme || 'dark');
+    });
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -265,7 +280,7 @@ const DotField = memo(({
         React.createElement(
           'radialGradient',
           { id: glowIdRef.current },
-          React.createElement('stop', { offset: '0%', stopColor: glowColor }),
+          React.createElement('stop', { offset: '0%', stopColor: resolvedGlowColor }),
           React.createElement('stop', { offset: '100%', stopColor: 'transparent' })
         )
       ),

@@ -6,6 +6,7 @@
   --bg-secondary: #f8fafc;
   --text: #0f172a;
   --text-secondary: #475569;
+  --blackhole: rgba(241, 241, 241, 0.75);
   --card: #ffffff;
   --border: #e2e8f0;
   --primary: #2563eb;
@@ -21,6 +22,7 @@
   --bg-secondary: #0f172a;
   --text: #f8fafc; /* Whiter text */
   --text-secondary: #94a3b8;
+  --blackhole: rgba(0, 0, 0, 0.75);
   --card: #1e293b;
   --border: #334155;
   --primary: #60a5fa;
@@ -59,7 +61,7 @@ h1, h2, h3, .brand {
   padding: 0.9rem 1.25rem;
   margin: 0.8rem auto 1.2rem;
   max-width: min(1120px, calc(100% - 1.5rem));
-  background: rgba(0, 0, 0, 0.72);
+  background: var(--blackhole);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   position: sticky;

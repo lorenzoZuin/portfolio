@@ -27,67 +27,65 @@ const getProjectItems = (lang = 'es') => {
 
   return [
     {
-      title: 'Sudoku Solver',
-      subtitle: copy.sudoku,
-      handle: 'Python • GUI',
-      tags: ['Python', 'GUI'],
-      borderColor: '#3B82F6',
-      gradient: 'linear-gradient(135deg, #3B82F6 0%, #07111f 100%)',
-      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/sudokuSolver' }]
+        title: 'Evapotranspiración',
+        subtitle: copy.evapotranspiration,
+        tags: ['ML', 'Python'],
+        borderColor: '#10B981',
+        gradient: 'linear-gradient(135deg, #40b910 0%, #07140f 100%)',
+        image: './source/projects/evapotranspiracion.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/EvapoTranspiracion' }, { label: 'Web', href: 'https://evapo-transpiracion-ai.vercel.app/' }]
     },
     {
-      title: 'Evapotranspiración',
-      subtitle: copy.evapotranspiration,
-      handle: 'ML • Python',
-      tags: ['ML', 'Python'],
-      borderColor: '#10B981',
-      gradient: 'linear-gradient(135deg, #10B981 0%, #07140f 100%)',
-      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/EvapoTranspiracion' }, { label: 'Web', href: 'https://evapo-transpiracion-ai.vercel.app/' }]
+        title: 'Zaple Wrapped',
+        subtitle: copy.zaple,
+        tags: ['Python', 'Data'],
+        borderColor: '#74098f',
+        gradient: 'linear-gradient(135deg, #74098f 0%, #180707 100%)',
+        image: './source/projects/centralizaple3.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Zaple-wraped' }]
+    },
+    {
+        title: 'Books Reviews',
+        subtitle: copy.books,
+        tags: ['Data Science', 'ML'],
+        borderColor: '#8B5CF6',
+        gradient: 'linear-gradient(135deg, #8B5CF6 0%, #120818 100%)',
+        links: [{ label: 'GitHub', href: '#' }]
+    },
+    {
+        title: 'Nexobit',
+        subtitle: copy.nexobit,
+        tags: ['AI', 'Vapi'],
+        borderColor: '#06B6D4',
+        gradient: 'linear-gradient(135deg, #06B6D4 0%, #02131a 100%)',
+        image: './source/projects/nexobit.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/nexobit' }]
+    },
+    {
+        title: 'MindGames',
+        subtitle: copy.mindgames,
+        tags: ['React'],
+        borderColor: '#2a50b8',
+        gradient: 'linear-gradient(135deg, #2a50b8 0%, #1a0710 100%)',
+        image: './source/projects/mindgames.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/MindGames' }, { label: 'Web', href: 'https://mind-games-eight.vercel.app/' }]
     },
     {
       title: 'Notes App',
       subtitle: copy.notes,
-      handle: 'React',
       tags: ['React'],
-      borderColor: '#F59E0B',
-      gradient: 'linear-gradient(135deg, #F59E0B 0%, #1a1204 100%)',
+      borderColor: '#18d15f',
+      gradient: 'linear-gradient(135deg, #18d15f 0%, #1a1204 100%)',
+      image: './source/projects/notesapp.png',
       links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Notes-app' }]
     },
     {
-      title: 'Zaple Wrapped',
-      subtitle: copy.zaple,
-      handle: 'Python • Data',
-      tags: ['Python', 'Data'],
-      borderColor: '#EF4444',
-      gradient: 'linear-gradient(135deg, #EF4444 0%, #180707 100%)',
-      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Zaple-wraped' }]
-    },
-    {
-      title: 'Books Reviews',
-      subtitle: copy.books,
-      handle: 'Data Science • ML',
-      tags: ['Data Science', 'ML'],
-      borderColor: '#8B5CF6',
-      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #120818 100%)',
-      links: [{ label: 'GitHub', href: '#' }]
-    },
-    {
-      title: 'Nexobit',
-      subtitle: copy.nexobit,
-      handle: 'AI • Vapi',
-      tags: ['AI', 'Vapi'],
-      borderColor: '#06B6D4',
-      gradient: 'linear-gradient(135deg, #06B6D4 0%, #02131a 100%)',
-      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/nexobit' }]
-    },
-    {
-      title: 'MindGames',
-      subtitle: copy.mindgames,
-      handle: 'React',
-      tags: ['React'],
-      borderColor: '#E11D48',
-      gradient: 'linear-gradient(135deg, #E11D48 0%, #1a0710 100%)',
-      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/MindGames' }, { label: 'Web', href: 'https://mind-games-eight.vercel.app/' }]
+      title: 'Sudoku Solver',
+      subtitle: copy.sudoku,
+      tags: ['Python', 'GUI'],
+      borderColor: '#d49d06',
+      gradient: 'linear-gradient(135deg, #d49d06 0%, #07111f 100%)',
+      links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/sudokuSolver' }]
     }
   ];
 };
@@ -108,6 +106,9 @@ const ChromaGrid = ({
   const setY = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
   const [lang, setLang] = useState('es');
+  const [theme, setTheme] = useState(document.documentElement.dataset.theme || 'dark');
+  const isLightTheme = theme === 'light';
+  const backgroundColor = isLightTheme ? 'rgba(219, 219, 219, 0.95)' : 'rgba(8, 5, 10, 0.35)';
 
   useEffect(() => {
     const el = rootRef.current;
@@ -238,6 +239,7 @@ const ChromaGrid = ({
         React.createElement(
           'div',
           { className: 'project-visual' },
+          card.image ? React.createElement('img', { className: 'project-visual__image', src: card.image, alt: card.title, loading: 'lazy' }) : null,
           React.createElement('span', { className: 'project-visual__badge' }, card.title)
         ),
         React.createElement(
@@ -247,12 +249,11 @@ const ChromaGrid = ({
             'div',
             { className: 'project-header' },
             React.createElement('h3', { className: 'name' }, card.title),
-            card.handle ? React.createElement('span', { className: 'handle' }, card.handle) : null
-          ),
+        ),
           React.createElement(
-            'div',
-            { className: 'project-tags' },
-            ...(card.tags || []).map((tag) => React.createElement('span', { key: `${card.title}-${tag}`, className: 'project-tag' }, tag))
+          'div',
+          { className: 'project-tags' },
+          ...(card.tags || []).map((tag) => React.createElement('span', { key: `${card.title}-${tag}`, className: 'project-tag' }, tag))
           ),
           React.createElement('p', { className: 'role' }, card.subtitle),
           React.createElement('div', { className: 'project-links' }, linkItems)
