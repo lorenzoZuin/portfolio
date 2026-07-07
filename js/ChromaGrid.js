@@ -4,22 +4,26 @@ import { gsap } from 'https://esm.sh/gsap';
 const getProjectItems = (lang = 'es') => {
   const translations = {
     es: {
-      sudoku: 'Resolución automática de sudokus con interfaz visual.',
-      evapotranspiration: 'Predicción de evapotranspiración con modelos de IA.',
+      sudoku: 'Resolución automática de sudokus con interfaz visual. Utiliza métodos avanzados como backtracking y algoritmos de búsqueda para encontrar soluciones de manera eficiente.',
+      evapotranspiration: 'Predicción de un valor llamado evapotranspiración, se entrenó un modelo de machine learning con datos de años pasados para predecir el valor futuro.',
       notes: 'Gestión de notas con categorías, filtros y archivado.',
-      zaple: 'Wrapped de clientes de Zaple con métricas y logros del año.',
-      books: 'Predicción de calificación de libros en Amazon con machine learning.',
-      nexobit: 'Agente virtual de IA para atender llamadas y pedidos.',
-      mindgames: 'Juego cognitivo para entrenar atención y velocidad de respuesta.'
+      zaple: 'Wrapped de clientes de Zaple con métricas y logros del año. Se utilizó scrapeo de datos de instagram y posterior procesamieto para generar resportes de cada cliente.',
+      Centralizaple: 'Sistema CRM personalizado de gestión de clientes, empleados y gastos de Zaple, esta integrado con ARCA para realizar facturación automática desde la plataforma.',
+      books: 'Predicción de calificación de libros en Amazon con machine learning. Se entrenó un modelo con datos de libros y sus calificaciones para predecir la calificación de libros nuevos.',
+      nexobit: 'Agente virtual de IA para atender llamadas y pedidos. Esd un agente que atiende llamadas telefónicas para cargar pedidos de manera automática.',
+      mindgames: 'Juego cognitivo para entrenar atención, memoria y velocidad de respuesta. Hecho especialmente para personas adultas para ayudar a reducir el deterioro cognitivo',
+      hunters: 'Pagina web profesional de un grupo de entrenamiento de OCR de Córdoba tiene la información de los entrenamientos, horarios y contacto.'
     },
     en: {
-      sudoku: 'Automatic sudoku solving with a visual interface.',
-      evapotranspiration: 'Evapotranspiration prediction with AI models.',
+      sudoku: 'Automatic sudoku solving with a visual interface. Uses advanced methods like backtracking and search algorithms to find solutions efficiently.',
+      evapotranspiration: 'Evapotranspiration prediction, a machine learning model was trained with past data to predict future values.',
       notes: 'Note management with categories, filters, and archiving.',
-      zaple: 'Zaple client wrapped with key metrics and yearly achievements.',
-      books: 'Amazon book rating prediction with machine learning.',
-      nexobit: 'Virtual AI agent for handling calls and orders.',
-      mindgames: 'Cognitive game to train attention and response speed.'
+      zaple: 'Zaple client wrapped with key metrics and yearly achievements. Data was scraped from Instagram and processed to generate reports for each client.',
+      Centralizaple: 'Custom CRM system for managing clients, employees, and expenses for Zaple, integrated with ARCA for automatic invoicing from the platform.',
+      books: 'Amazon book rating prediction with machine learning. A model was trained with book data and their ratings to predict the rating of new books.',
+      nexobit: 'Virtual AI agent for handling calls and orders. It is an agent that answers phone calls to automatically process orders.',
+      mindgames: 'Cognitive game to train attention, memory, and response speed. Made especially for adults to help reduce cognitive decline.',
+      hunters: 'Professional website for a training group in OCR of Córdoba, providing information about training sessions, schedules, and contact details.'
     }
   };
 
@@ -36,21 +40,30 @@ const getProjectItems = (lang = 'es') => {
         links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/EvapoTranspiracion' }, { label: 'Web', href: 'https://evapo-transpiracion-ai.vercel.app/' }]
     },
     {
-        title: 'Zaple Wrapped',
-        subtitle: copy.zaple,
+        title: 'Centralizaple',
+        subtitle: copy.Centralizaple,
         tags: ['Python', 'Data'],
         borderColor: '#74098f',
         gradient: 'linear-gradient(135deg, #74098f 0%, #180707 100%)',
-        image: './source/projects/centralizaple3.png',
+        image: './source/projects/centralizaple.jpeg',
         links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Zaple-wraped' }]
     },
     {
         title: 'Books Reviews',
         subtitle: copy.books,
         tags: ['Data Science', 'ML'],
-        borderColor: '#8B5CF6',
-        gradient: 'linear-gradient(135deg, #8B5CF6 0%, #120818 100%)',
+        borderColor: '#4df794',
+        gradient: 'linear-gradient(135deg, #4df794 0%, #120818 100%)',
         links: [{ label: 'GitHub', href: '#' }]
+    },
+    {
+        title: 'Hunters',
+        subtitle: copy.hunters,
+        tags: ['Web', 'JavaScript'],
+        borderColor: '#5b11bb',
+        gradient: 'linear-gradient(135deg, #5b11bb 0%, #1A1204 100%)',
+        image: './source/projects/hunters.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Hunters-ocr' }, { label: 'Web', href: 'https://hunters-ocr.vercel.app/' }]
     },
     {
         title: 'Nexobit',
@@ -203,7 +216,6 @@ const ChromaGrid = ({
       onPointerLeave: handleLeave
     },
     data.map((card, index) => {
-      const firstLink = card.links?.find((link) => link?.href && link.href !== '#');
       const linkItems = (card.links || []).map((link, linkIndex) =>
         React.createElement(
           link.href && link.href !== '#' ? 'a' : 'span',
@@ -214,8 +226,9 @@ const ChromaGrid = ({
             target: link.href && link.href !== '#' ? '_blank' : undefined,
             rel: link.href && link.href !== '#' ? 'noopener noreferrer' : undefined,
             onClick: (event) => {
-              if (!link.href || link.href === '#') {
-                event.stopPropagation();
+              event.stopPropagation();
+              if (link.href && link.href !== '#') {
+                window.open(link.href, '_blank', 'noopener,noreferrer');
               }
             }
           },
@@ -229,18 +242,16 @@ const ChromaGrid = ({
           key: `${card.title}-${index}`,
           className: 'chroma-card project-card reveal',
           onMouseMove: handleCardMove,
-          onClick: () => handleCardClick(firstLink?.href),
           style: {
             '--card-border': card.borderColor || 'transparent',
             '--card-gradient': card.gradient,
-            cursor: firstLink?.href ? 'pointer' : 'default'
+            cursor: 'default'
           }
         },
         React.createElement(
           'div',
           { className: 'project-visual' },
           card.image ? React.createElement('img', { className: 'project-visual__image', src: card.image, alt: card.title, loading: 'lazy' }) : null,
-          React.createElement('span', { className: 'project-visual__badge' }, card.title)
         ),
         React.createElement(
           'div',
