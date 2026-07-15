@@ -12,7 +12,8 @@ const getProjectItems = (lang = 'es') => {
       books: 'Predicción de calificación de libros en Amazon con machine learning. Se entrenó un modelo con datos de libros y sus calificaciones para predecir la calificación de libros nuevos.',
       nexobit: 'Agente virtual de IA para atender llamadas y pedidos. Esd un agente que atiende llamadas telefónicas para cargar pedidos de manera automática.',
       mindgames: 'Juego cognitivo para entrenar atención, memoria y velocidad de respuesta. Hecho especialmente para personas adultas para ayudar a reducir el deterioro cognitivo',
-      hunters: 'Pagina web profesional de un grupo de entrenamiento de OCR de Córdoba tiene la información de los entrenamientos, horarios y contacto.'
+      hunters: 'Pagina web profesional de un grupo de entrenamiento de OCR de Córdoba tiene la información de los entrenamientos, horarios y contacto.',
+      Sentinel: 'Sitio web que scrapea diariamente diversos sitios para obtener información de precios de productos y generar reportes para clientes.',
     },
     en: {
       sudoku: 'Automatic sudoku solving with a visual interface. Uses advanced methods like backtracking and search algorithms to find solutions efficiently.',
@@ -23,7 +24,8 @@ const getProjectItems = (lang = 'es') => {
       books: 'Amazon book rating prediction with machine learning. A model was trained with book data and their ratings to predict the rating of new books.',
       nexobit: 'Virtual AI agent for handling calls and orders. It is an agent that answers phone calls to automatically process orders.',
       mindgames: 'Cognitive game to train attention, memory, and response speed. Made especially for adults to help reduce cognitive decline.',
-      hunters: 'Professional website for a training group in OCR of Córdoba, providing information about training sessions, schedules, and contact details.'
+      hunters: 'Professional website for a training group in OCR of Córdoba, providing information about training sessions, schedules, and contact details.',
+      Sentinel: 'Website that scrapes various sites daily to obtain product price information and generate reports for clients.',
     }
   };
 
@@ -36,8 +38,19 @@ const getProjectItems = (lang = 'es') => {
         tags: ['ML', 'Python'],
         borderColor: '#10B981',
         gradient: 'linear-gradient(135deg, #40b910 0%, #07140f 100%)',
-        image: './source/projects/evapotranspiracion.png',
+        image: './source/projects/evapotranspiracion_logo.png',
+        hoverImage: './source/projects/evapotranspiracion.png',
         links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/EvapoTranspiracion' }, { label: 'Web', href: 'https://evapo-transpiracion-ai.vercel.app/' }]
+    },
+    {
+        title: 'Sentinel',
+        subtitle: copy.Sentinel,
+        tags: ['Python', 'Web Scraping', 'Cloud'],
+        borderColor: '#06B6D4',
+        gradient: 'linear-gradient(135deg, #06B6D4 0%, #02131a 100%)',
+        image: './source/projects/sentinel_logo.png',
+        hoverImage: './source/projects/sentinel.png',
+        links: [{ label: 'Web', href: 'https://sentinel.lucid.com.ar' }]
     },
     {
         title: 'Centralizaple',
@@ -45,8 +58,39 @@ const getProjectItems = (lang = 'es') => {
         tags: ['Python', 'Data'],
         borderColor: '#74098f',
         gradient: 'linear-gradient(135deg, #74098f 0%, #180707 100%)',
-        image: './source/projects/centralizaple.jpeg',
+        image: './source/projects/centralizaple_logo.png',
+        hoverImage: './source/projects/centralizaple3.png',
         links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Zaple-wraped' }]
+    },
+    {
+        title: 'MindGames',
+        subtitle: copy.mindgames,
+        tags: ['React'],
+        borderColor: '#c09110',
+        gradient: 'linear-gradient(135deg, #c09110 0%, #1a0710 100%)',
+        image: './source/projects/mindgames_logo.png',
+        hoverImage: './source/projects/mindgames.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/MindGames' }, { label: 'Web', href: 'https://mind-games-eight.vercel.app/' }]
+    },
+    {
+        title: 'Hunters',
+        subtitle: copy.hunters,
+        tags: ['Web', 'JavaScript'],
+        borderColor: '#5b11bb',
+        gradient: 'linear-gradient(135deg, #5b11bb 0%, #1A1204 100%)',
+        image: './source/projects/hunters_logo.png',
+        hoverImage: './source/projects/hunters.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Hunters-ocr' }, { label: 'Web', href: 'https://hunters-ocr.vercel.app/' }]
+    },
+    {
+        title: 'Nexobit',
+        subtitle: copy.nexobit,
+        tags: ['AI', 'Vapi'],
+        borderColor: '#0688d4',
+        gradient: 'linear-gradient(135deg, #06B6D4 0%, #02131a 100%)',
+        image: './source/projects/nexobit_logo.png',
+        hoverImage: './source/projects/nexobit.png',
+        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/nexobit' }]
     },
     {
         title: 'Books Reviews',
@@ -55,33 +99,6 @@ const getProjectItems = (lang = 'es') => {
         borderColor: '#4df794',
         gradient: 'linear-gradient(135deg, #4df794 0%, #120818 100%)',
         links: [{ label: 'GitHub', href: '#' }]
-    },
-    {
-        title: 'Hunters',
-        subtitle: copy.hunters,
-        tags: ['Web', 'JavaScript'],
-        borderColor: '#5b11bb',
-        gradient: 'linear-gradient(135deg, #5b11bb 0%, #1A1204 100%)',
-        image: './source/projects/hunters.png',
-        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Hunters-ocr' }, { label: 'Web', href: 'https://hunters-ocr.vercel.app/' }]
-    },
-    {
-        title: 'Nexobit',
-        subtitle: copy.nexobit,
-        tags: ['AI', 'Vapi'],
-        borderColor: '#06B6D4',
-        gradient: 'linear-gradient(135deg, #06B6D4 0%, #02131a 100%)',
-        image: './source/projects/nexobit.png',
-        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/nexobit' }]
-    },
-    {
-        title: 'MindGames',
-        subtitle: copy.mindgames,
-        tags: ['React'],
-        borderColor: '#2a50b8',
-        gradient: 'linear-gradient(135deg, #2a50b8 0%, #1a0710 100%)',
-        image: './source/projects/mindgames.png',
-        links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/MindGames' }, { label: 'Web', href: 'https://mind-games-eight.vercel.app/' }]
     },
     {
       title: 'Notes App',
@@ -244,6 +261,7 @@ const ChromaGrid = ({
           onMouseMove: handleCardMove,
           style: {
             '--card-border': card.borderColor || 'transparent',
+            '--card-accent': card.borderColor || 'rgba(255,255,255,0.2)',
             '--card-gradient': card.gradient,
             cursor: 'default'
           }
@@ -251,7 +269,18 @@ const ChromaGrid = ({
         React.createElement(
           'div',
           { className: 'project-visual' },
-          card.image ? React.createElement('img', { className: 'project-visual__image', src: card.image, alt: card.title, loading: 'lazy' }) : null,
+          card.image ? React.createElement('img', {
+            className: 'project-visual__image project-visual__image--primary',
+            src: card.image,
+            alt: `${card.title} logo`,
+            loading: 'lazy'
+          }) : null,
+          card.hoverImage || card.image ? React.createElement('img', {
+            className: 'project-visual__image project-visual__image--secondary',
+            src: card.hoverImage || card.image,
+            alt: `${card.title} preview`,
+            loading: 'lazy'
+          }) : null
         ),
         React.createElement(
           'div',
