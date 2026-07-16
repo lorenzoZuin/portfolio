@@ -106,7 +106,6 @@ const getProjectItems = (lang = 'es') => {
       tags: ['React'],
       borderColor: '#18d15f',
       gradient: 'linear-gradient(135deg, #18d15f 0%, #1a1204 100%)',
-      image: './source/projects/notesapp.png',
       links: [{ label: 'GitHub', href: 'https://github.com/lorenzoZuin/Notes-app' }]
     },
     {
