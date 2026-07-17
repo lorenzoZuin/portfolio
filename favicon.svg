@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Folder icon">
+  <rect x="6" y="12" width="52" height="40" rx="8" fill="#1f3d8f"/>
+  <path d="M6 20h20l6-8h26v8H6z" fill="#5b7cff"/>
+  <rect x="16" y="26" width="32" height="18" rx="4" fill="#f4f7ff" opacity="0.95"/>
+  <path d="M24 32h16" stroke="#1f3d8f" stroke-width="3" stroke-linecap="round"/>
+</svg>
